@@ -8,6 +8,7 @@ const UserTemplate = () => {
     <div className="flex flex-col justify-between min-h-screen">
       <Header />
       <div className="h-[67px]"></div>
+
       <Outlet />
       <Footer />
     </div>
