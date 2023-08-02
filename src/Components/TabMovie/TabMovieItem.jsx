@@ -5,6 +5,7 @@ import moment from "moment";
 
 const TabMovieItem = ({ maHeThongRap }) => {
   const [systemCinema, setSystemCinema] = useState([]);
+
   useEffect(() => {
     cinemaSer
       .getAllInfoCinemaBySystem(maHeThongRap)
@@ -18,7 +19,7 @@ const TabMovieItem = ({ maHeThongRap }) => {
   }, [maHeThongRap]);
   //mã hệ thống rạp thay dổi nên chạy component updating [maHeThongRap]
   const renderTabMovieItem = () => {
-    console.log(systemCinema[0]);
+    // console.log(systemCinema[0]);
     return systemCinema[0]?.lstCumRap.map((item, index) => {
       return {
         label: (
@@ -31,7 +32,7 @@ const TabMovieItem = ({ maHeThongRap }) => {
         children: item.danhSachPhim.map((item, index) => {
           if (item.dangChieu) {
             return (
-              <div className="flex">
+              <div className="flex" key={index}>
                 <div className="w-2/12 mb-5">
                   <img src={item.hinhAnh} alt="" />
                 </div>
