@@ -1,8 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getDataLocal } from "../../utils/localStore";
+import { userSer } from "../../services/userListServices";
+
+//createAsyncThunk Middleware
+export const getAllUser = createAsyncThunk("user/getAllUser", async () => {
+  const response = await userSer.getAllUserList();
+  return response.data.content;
+});
 
 const initialState = {
   name: getDataLocal("user"),
+  users: [],
 };
 
 export const userSlice = createSlice({
@@ -14,6 +22,23 @@ export const userSlice = createSlice({
         state.name = action.payload;
       }
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getAllUser.fulfilled, (state, action) => {
+      // console.log(state);
+      // console.log(action);
+      state.users = action.payload;
+    });
+    builder.addCase(getAllUser.rejected, (state, action) => {
+      console.log("error");
+      // console.log(action);
+      // state.users = [
+      //   {
+      //     hoTen: "nguyen",
+      //     maLoaiNguoiDung: "QuanTri",
+      //   },
+      // ];
+    });
   },
 });
 export const { setDataName } = userSlice.actions;
