@@ -1,25 +1,30 @@
+Ghi chú về dự án Movie
+
 Các thư mục cần tạo:
 
-- Components(Chứa các thành phần nhỏ trong một page)
-- Pages(Home, Detail, BokingTicket, SignUp, SignIn, Admin, AdminUsers, AdminFilms, AdminFilmsList, AdminFilmsAdd, )
-- Redux
-- Services: Nơi lưu trữ các logic về gọi dữ liệu
-- Utils: Nơi chứa các hàm, các logic hỗ trợ
-- Assets: Lưu trữ hình ảnh, mp4, json, svg...
-- Template
+- Components
+- pages
+- redux
+- services : nơi lưu trữ các logic về gọi dữ liệu
+- util : nơi chứa các hàm các logic hỗ trợ
+- assets : nơi lưu trữ các hình ảnh, mp4, json, svg ....
+- template
 
-Các thư viện cần cài đặt:
+Các thư viện cần cài đặt
 
 - react-router-dom
 - axios
-- redux/react-redux => npm i @reduxjs/toolkit react-redux
-
+- redux - react-redux
 - antd
 - tailwindcss
-- sass
+- sass - sass-loader
 - react-lottie
 - moment
 - formik - quản lí form
 
 // link truy cập swagger lấy api
 https://movienew.cybersoft.edu.vn/swagger/index.html
+
+trang đăng nhập, trang detail, với dashboard admin
+"# movie" 
+"# movie_" 

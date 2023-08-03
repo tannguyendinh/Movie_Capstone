@@ -1,7 +1,10 @@
-import { https } from "./config";
+import { https } from './config';
 
-export const movieSer = {
+export const movieServ = {
   getAllBanner: () => {
-    return https.get("/api/QuanLyPhim/LayDanhSachBanner");
+    return https.get('/api/QuanLyPhim/LayDanhSachBanner');
+  },
+  getAllMovie: () => {
+    return https.get('/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09');
   },
 };

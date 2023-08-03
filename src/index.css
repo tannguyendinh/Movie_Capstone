@@ -1,17 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-carousel
-  .slick-dots
-  li
-  button {
-  background: rgb(255, 255, 255);
-  opacity: 1;
-}
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-carousel
-  .slick-dots
-  li.slick-active
-  button {
-  background-color: red;
-}
