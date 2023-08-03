@@ -19,7 +19,7 @@ const AdminTemplate = () => {
   const navigate = useNavigate();
 
   const { name } = useSelector((state) => state.user);
-  console.log(name);
+  // console.log(name);
   const {
     token: { colorBgContainer },
   } = theme.useToken();

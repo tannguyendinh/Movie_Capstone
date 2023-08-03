@@ -10,3 +10,6 @@
   display: flex;
   justify-content: center;
 }
+:where(.css-dev-only-do-not-override-1sn0ohr).ant-btn > span {
+  color: #000;
+}

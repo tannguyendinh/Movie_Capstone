@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getDataLocal } from "../../utils/localStore";
-import { userSer } from "../../services/userListServices";
+import { userAdminSer } from "../../services/userListServices";
 
 //createAsyncThunk Middleware
 export const getAllUser = createAsyncThunk("user/getAllUser", async () => {
-  const response = await userSer.getAllUserList();
+  const response = await userAdminSer.getAllUserList();
   return response.data.content;
 });
 
