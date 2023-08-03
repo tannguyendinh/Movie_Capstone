@@ -61,7 +61,7 @@ const FromLogin = () => {
           <h2 className="text-center text-xl font-bold">Login</h2>
           <label
             htmlFor="email"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900"
           >
             Tài khoản
           </label>
@@ -71,7 +71,7 @@ const FromLogin = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             status={touched.taiKhoan && errors.taiKhoan ? "error" : null}
-            placeholder="Error"
+            placeholder="Nhập tài khoản"
             className="py-2"
           />
           {/* <Input
@@ -95,7 +95,7 @@ const FromLogin = () => {
         <div className="mb-6">
           <label
             htmlFor="password"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900 "
           >
             Mật khẩu
           </label>
@@ -105,7 +105,7 @@ const FromLogin = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             status={touched.matKhau && errors.matKhau ? "error" : null}
-            placeholder="Error"
+            placeholder="Nhập mật khẩu"
             className="py-2"
           />
 

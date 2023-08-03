@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { userSer } from "../../services/userListServices";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUser } from "../../redux/slices/userSlices";
+import TableUser from "../../Components/AdminTemplete/TableUser/TableUser";
 
 const UserManage = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const UserManage = () => {
 
   console.log(users);
 
-  return <div>UserManage</div>;
+  return <TableUser />;
 };
 
 export default UserManage;
